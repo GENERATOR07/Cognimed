@@ -1,7 +1,8 @@
 import { User} from '@/dummy/menu-data'
 import React from 'react'
 interface UserListProps{
-    data:User[]
+    data:User[],
+  
 }
 interface UserListItemProps{
     id:number,
@@ -16,6 +17,7 @@ const UserListItem=({id,name,lastMessage}:UserListItemProps)=>{
 }
 
 export default function UserList({data}:UserListProps) {
+  
   return<div className='flex flex-col py-2 gap-4'>
     {
         data.map((data:User)=><UserListItem id={data.id} name={data.name} lastMessage={data.lastMessage}/>)
