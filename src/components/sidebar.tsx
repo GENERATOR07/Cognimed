@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from 'react'
 import { TiMessage } from "react-icons/ti";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -12,10 +10,7 @@ import { useUserMode } from '@/hooks/useMode';
 
 export default function Sidebar() {
    const {userMode,toggleUserMode}=useUserMode()
-    // const[userMode,setUserMode]=useState<boolean>(true)
-    // const toggleMode=()=>{
-    //     setUserMode(v=>!v)
-    // }
+    
   return (
     <div className="bg-blue-950 w-[70px] flex flex-col justify-between pb-8 items-center">
        
