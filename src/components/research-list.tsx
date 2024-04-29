@@ -14,7 +14,8 @@ const ResearchListItem = ({ id, topic, date }: ResearchListItemProps) => {
   const handelClick = () => {
     setChatDetails({ id, topic, name: "" });
   };
-  let selected = chatDetails?.id === id ? "bg-gray-800" : "";
+  let selected =
+    chatDetails?.id === id && chatDetails?.topic === topic ? "bg-gray-800" : "";
   return (
     <button
       onClick={handelClick}

@@ -10,14 +10,16 @@ interface UserListItemProps {
   lastMessage: string;
 }
 const UserListItem = ({ id, name, lastMessage }: UserListItemProps) => {
-  const { setChatDetails } = useChatDetails();
+  const { chatDetails, setChatDetails } = useChatDetails();
   const handelClick = () => {
     setChatDetails({ id, name, topic: "" });
   };
+  let selected =
+    chatDetails?.id === id && chatDetails?.name === name ? "bg-gray-800" : "";
   return (
     <button
       onClick={handelClick}
-      className="flex flex-col gap-1 px-4 py-2 hover:bg-gray-800"
+      className={`flex flex-col gap-1 px-4 py-2 ${selected} hover:bg-gray-800`}
     >
       <span className="text-sm">{name}</span>
       <span className="text-xs">{lastMessage}</span>
