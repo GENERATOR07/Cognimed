@@ -10,12 +10,16 @@ interface ResearchListItemProps {
   date: string;
 }
 const ResearchListItem = ({ id, topic, date }: ResearchListItemProps) => {
-  const { setChatDetails } = useChatDetails();
+  const { chatDetails, setChatDetails } = useChatDetails();
   const handelClick = () => {
     setChatDetails({ id, topic, name: "" });
   };
+  let selected = chatDetails?.id === id ? "bg-gray-800" : "";
   return (
-    <button onClick={handelClick} className="flex flex-col gap-1 px-4 py-2">
+    <button
+      onClick={handelClick}
+      className={`flex flex-col gap-1 px-4 py-2 ${selected} hover:bg-gray-800`}
+    >
       <span className="text-sm">{topic}</span>
       <span className="text-xs">{date}</span>
     </button>

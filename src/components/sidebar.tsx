@@ -12,7 +12,7 @@ export default function Sidebar() {
       <div className="flex flex-col items-center ">
         <span className="p-4">
           {" "}
-          <div className="bg-gray-900 w-10 h-10 rounded-full"></div>
+          <div className="bg-gray-700 w-10 h-10 rounded-full"></div>
         </span>
         <span className="p-4">
           <TiMessage size={20} />

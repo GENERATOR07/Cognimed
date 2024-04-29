@@ -40,7 +40,7 @@ export default function Menu() {
       ) : null}
       <button
         onClick={handelCollapse}
-        className=" absolute right-[-10px] top-1/2 visible rounded-full border-gray-800 border-2"
+        className=" absolute right-[-10px] top-1/2 visible rounded-full border-gray-800 border-2 bg-gray-800"
       >
         {isCollapseable ? (
           <IoIosArrowDropleftCircle size={20} />

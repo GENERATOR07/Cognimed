@@ -15,7 +15,10 @@ const UserListItem = ({ id, name, lastMessage }: UserListItemProps) => {
     setChatDetails({ id, name, topic: "" });
   };
   return (
-    <button onClick={handelClick} className="flex flex-col gap-1 px-4 py-2">
+    <button
+      onClick={handelClick}
+      className="flex flex-col gap-1 px-4 py-2 hover:bg-gray-800"
+    >
       <span className="text-sm">{name}</span>
       <span className="text-xs">{lastMessage}</span>
     </button>
